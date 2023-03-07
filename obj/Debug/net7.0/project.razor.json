@@ -5229,6 +5229,43 @@
         }
       },
       {
+        "HashCode": 731877085,
+        "Kind": "Components.Component",
+        "Name": "FormulaOne.Client.Pages.Riders",
+        "AssemblyName": "FormulaOne.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Riders"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "FormulaOne.Client.Pages.Riders",
+          "Common.TypeNamespace": "FormulaOne.Client.Pages",
+          "Common.TypeNameIdentifier": "Riders"
+        }
+      },
+      {
+        "HashCode": -184062388,
+        "Kind": "Components.Component",
+        "Name": "FormulaOne.Client.Pages.Riders",
+        "AssemblyName": "FormulaOne.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "FormulaOne.Client.Pages.Riders"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "FormulaOne.Client.Pages.Riders",
+          "Common.TypeNamespace": "FormulaOne.Client.Pages",
+          "Common.TypeNameIdentifier": "Riders",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
         "HashCode": -315400425,
         "Kind": "Components.Component",
         "Name": "FormulaOne.Client.Shared.SurveyPrompt",
