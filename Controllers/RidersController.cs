@@ -36,4 +36,14 @@ public class RidersController : ControllerBase
 
     }
 
+    [HttpPost]
+    public async Task<IActionResult> CreateRider_(Rider rider)
+    {
+        _context.Riders.Add(rider);
+        await _context.SaveChangesAsync();
+
+        return CreatedAtAction(nameof(GetRiderDetails), rider, rider.Id);
+
+    }
+
 }
