@@ -43,7 +43,27 @@ public class RidersController : ControllerBase
         await _context.SaveChangesAsync();
 
         return CreatedAtAction(nameof(GetRiderDetails), rider, rider.Id);
-
     }
+
+    [HttpPut("{id}")]
+    public async Task<IActionResult> UpdateRider(Rider rider, int id)
+    {
+        var riderExist = await _context.Riders.FirstOrDefaultAsync(x => x.Id == id);
+
+        if(riderExist == null)
+            return NotFound();
+
+        riderExist.Name = rider.Name;
+        riderExist.RacingNb = rider.RacingNb;
+        riderExist.Team = rider.Team;
+
+        await _context.SaveChangesAsync();
+
+        return NoContent();
+    }
+
+
+    
+
 
 }
