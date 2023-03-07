@@ -24,4 +24,16 @@ public class RidersController : ControllerBase
         return Ok(riders);
     }
 
+    [HttpGet("{id}")]
+    public async Task<ActionResult<Rider>> GetRiderDetails(int id)
+    {
+        var rider = await _context.Riders.FirstOrDefaultAsync(x => x.Id == id);
+
+        if(rider == null)
+            return NotFound();
+
+        return Ok(rider);
+
+    }
+
 }
