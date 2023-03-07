@@ -63,7 +63,19 @@ public class RidersController : ControllerBase
     }
 
 
-    
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> DeleteRider(int id)
+    {
+        var riderExist = await _context.Riders.FirstOrDefaultAsync(x => x.Id == id);
+
+        if (riderExist == null)
+            return NotFound();
+
+        _context.Riders.Remove(riderExist);
+        await _context.SaveChangesAsync();
+
+        return NoContent();
+    }
 
 
 }
