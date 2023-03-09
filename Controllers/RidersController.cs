@@ -5,7 +5,6 @@ using Microsoft.EntityFrameworkCore;
 
 namespace FormulaOne.Server.Controllers;
 
-
 [ApiController]
 [Route("api/[controller]")]
 public class RidersController : ControllerBase
